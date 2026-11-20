@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[Sayfa açıklaması]">
+  <title>Kişisel Portfolyom -- Berk Selvi</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+</script>
+  <link rel="preload"
+      href="icerikler/fonts/Fraunces.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Berk Selvi</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menüyü aç">
+        ☰
+      </button>
+      <nav id="main-nav" aria-label="Ana gezinme">
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="hakkimda.html">Hakkımda</a></li>
+          <li><a href="projeler.html" aria-current="page">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Karanlık modu aç/kapat">🌙</button>
+    </div>
+  </header>
+
+  <main id="main">
+<section>
+  <h1>Projeler</h1>
+
+<div class="filter-bar">
+  <label for="project-search">Proje ara:</label>
+  <input type="search" id="project-search" placeholder="Örn: Python, HTML, medya">
+
+  <label for="project-filter">Kategori:</label>
+  <select id="project-filter">
+    <option value="all">Tümü</option>
+    <option value="pyt">Python</option>
+    <option value="med">Medya</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="js">Javascript</option>
+    <option value="form">Form</option>
+    <option value="crit">Eleştirel</option>
+    <option value="pol">Siyaset</option>
+    <option value="poem">Şiir</option>
+  </select>
+</div>
+
+  <p id="project-count" aria-live="polite">4 proje gösteriliyor.</p>
+
+  <div class="project-grid" id="project-grid">
+
+    <!-- Kart 1 -->
+    <article class="project-card" data-tags="pyt med">
+      <img src="/icerikler/ss/screenshotalfred.png" alt="Ödev 1: kişisel tanıtım sayfası ekran görüntüsü">
+      <h2>Proje 1: Python Mini CLI Uygulaması, Alfred Medya Takip Robotu</h2>
+      <div class="tags-row">
+        <span class="tag">Python</span>
+        <span class="tag">Medya</span>
+      </div>
+      <p>İzlediğiniz film ve dizileri kaydeden, sevdiklerinizi ve sevmediklerinizi
+ayrı listelerde tutan, izleme listenizi yöneten ve Alfred'in size rastgele öneri sunduğu komut satırı uygulaması.</p>
+      <p class="learned"><strong>Ne öğrendim:</strong> Python syntax, looplar, operatorler</p>
+      <a href="https://github.com/RealBerk/Alfred_the_Media_Tracking_Butler" target="_blank" rel="noopener">GitHub'da gör</a>
+    </article>
+
+    <!-- Kart 2 -->
+    <article class="project-card" data-tags="html css">
+      <img src="icerikler/ss/screenshotsite.png" alt="Ödev 2: CSS kart tasarımı ekran görüntüsü">
+      <h2>Proje 2: Tanıtım Sayfası ve CSS Kartları</h2>
+      <div class="tags-row">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">Responsive</span>
+      </div>
+      <p>HTML akışını (body, header, footer, h1, h2...), Flexbox ve grid ile responsive kartlar oluşturdum.</p>
+      <p class="learned"><strong>Ne öğrendim:</strong> header/nav/main/footer yapısı ve alt metinler, media query ve CSS değişkenleri.</p>
+      <p>Şu an bulunduğunuz web sitesi</p>   
+     </article>
+
+    <!-- Kart 3 -->
+    <article class="project-card" data-tags="form js">
+      <img src="icerikler/ss/screenshotjs.png" alt="Ödev 3: JavaScript form doğrulama ekran görüntüsü">
+      <h2>Proje 3: JS Form Doğrulama</h2>
+      <div class="tags-row">
+        <span class="tag">JavaScript</span>
+        <span class="tag">Form</span>
+      </div>
+      <p>Form alanlarını JavaScript ile doğruladım.</p>
+      <p class="learned"><strong>Ne öğrendim:</strong> addEventListener, aria-invalid, aria-live.</p>
+    </article>
+
+    <!-- Kart 4 -->
+    <article class="project-card" data-tags="crit pol">
+      <h2>Proje 4: Avrupa Dış Politikası Araştırma Projesi "European Diplomatic Edge and Credibility Can Only be Preserved if Yankees Go Home"</h2>
+      <div class="tags-row">
+        <span class="tag">Siyaset</span>
+        <span class="tag">Elestirel</span>
+      </div>
+      <p>Avrupa dış politikasını incelediğim ve NATO ile ilişkisini özerklik çerçevesinde tahlil ettiğim araştırma.</p>
+      <p class="learned"><strong>Ne öğrendim:</strong> Avrupa Siyaseti, iç ve dış ilişkiler, NATO, İran-ABD-İsrail ve İsrail-Filistin savaşları.</p>
+      <a href="oped.html">Yaziyi goruntule</a>
+    </article>
+<!-- Kart 5 -->
+    <article class="project-card" data-tags="poem">
+      <h2>The Gatherin at Eden -- Özgün Şiir</h2>
+      <div class="tags-row">
+        <span class="tag">Şiir</span>
+      </div>
+      <p>Tarafımdan yazılmış şiir</p>
+      <a href="poem.html">Yaziyi goruntule</a>
+    </article>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Berk Selvi . berkselvi09.info@gmail.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
